@@ -1,0 +1,82 @@
+*{
+  font-family: "Roboto", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.header {
+  box-sizing: border-box;
+  position: absolute;
+  margin-bottom: 5rem;
+}
+
+button {
+  padding: 10px;
+  padding-inline: 20px;
+  border-radius: 10px;
+  margin-top: 2rem;
+  margin-inline: -5rem;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  box-shadow: 15px 20px 7px -3px rgba(0,0,0,0.1);
+}
+
+#sim {
+  position: absolute;
+  margin-right: 4rem;
+  background-color: #4ee221ee;
+}
+#nao {
+  position: absolute;
+  margin-left: 4rem;
+  background-color: #ff0000;
+}
+
+img {
+  visibility: hidden;
+}
+
+#coracao {
+  height: 6rem;
+  margin-top: 16rem;
+  visibility: hidden;
+}
+
+ @keyframes comeco {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes batidas {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#coracao.inicio{
+  transform-origin: center;
+  visibility: visible;
+  animation: comeco 3s forwards;
+}
+
+#coracao.batimentos {
+  transform-origin: center;
+  visibility: visible;
+  animation: batidas 1s infinite alternate;
+} 
